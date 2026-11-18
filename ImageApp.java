@@ -7,7 +7,7 @@ public class ImageApp
 {
   public static void main(String[] args)
   {
-    String pictureFile = "lib/beach.jpg";
+    String pictureFile = "beach.jpg";
 
     // Image #1: reorder the RGB values in each pixel
     Picture recoloredImg = recolorSwap(new Picture(pictureFile));
@@ -34,7 +34,7 @@ public class ImageApp
 
     // Final Image: embed a smaller picture into a larger one
     Picture background = new Picture(pictureFile);
-    Picture overlay = new Picture("lib/flower1.jpg");
+    Picture overlay = new Picture("flowers.png");
     Picture combinedImg = embedImage(background, overlay, background.getHeight() / 4, overlay.getWidth() / 4);
     combinedImg.show();
 
