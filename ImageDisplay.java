@@ -93,7 +93,9 @@ public class ImageDisplay extends JPanel implements Scrollable
   public void setImage(Image theImage)
   {
     image = theImage;
-    setPreferredSize(new Dimension(image.getWidth(this),image.getHeight(this)));
+    prefSize = new Dimension(image.getWidth(this),image.getHeight(this));
+    setPreferredSize(prefSize);
+    revalidate();
     repaint();
   }
   
